@@ -7,6 +7,6 @@ router.get('/students', fetchAllStudents)
 router.get('/student/:id', fetchStudentById)
 router.post('/student', createStudent)
 router.put('/student/:id', updateFee)
-router.delete('/student:/id', deleteStudent)
+router.delete('/student/:id', deleteStudent)
 
 module.exports = router;
