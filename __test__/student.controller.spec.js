@@ -34,6 +34,7 @@ describe('Student controller', ()=>{
 
         expect(response.statusCode).toBe(200)
         expect(response.body.message).toBe('fetch successfull')
+        expect(response.body.students).toBeInstanceOf(Array)
     })
 
     it('should fetch a student record', async()=>{
@@ -43,6 +44,13 @@ describe('Student controller', ()=>{
 
         expect(response.statusCode).toBe(200)
         expect(response.body.message).toBe('Fetch successful')
+        expect(response.body.student).toEqual(
+            expect.objectContaining({
+                fullName: expect.any(String),
+                studentClass: expect.any(Number),
+                feeBalance: expect.any(Number)
+            })
+        )
     })
 
     it("should update a student's record fee", async()=>{
