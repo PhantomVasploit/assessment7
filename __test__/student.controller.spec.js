@@ -55,7 +55,7 @@ describe('Student controller', ()=>{
         expect(response.body.message).toBe('Student fee updated')
     })
 
-    it("should update a student's record fee", async()=>{
+    it("should delete soft student's record", async()=>{
 
         const response = await request(server)
         .delete('/api/v1/student/1')

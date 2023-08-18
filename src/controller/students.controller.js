@@ -104,7 +104,7 @@ module.exports.updateFee = async(req, res)=>{
             await pool
             .request()
             .input('id', id)
-            .input('feeBalance', feeBalance)
+            .input('fee_balance', feeBalance)
             .execute('updateFeeBalanceProc')
             return res.status(200).json({message: 'Student fee updated'})
         }else{
