@@ -46,9 +46,10 @@ describe('Student controller', ()=>{
         expect(response.body.message).toBe('Fetch successful')
         expect(response.body.student).toEqual(
             expect.objectContaining({
-                fullName: expect.any(String),
-                studentClass: expect.any(Number),
-                feeBalance: expect.any(Number)
+                id: expect.any(Number),
+                full_name: expect.any(String),
+                student_class: expect.any(Number),
+                fee_balance: expect.any(Number)
             })
         )
     })
